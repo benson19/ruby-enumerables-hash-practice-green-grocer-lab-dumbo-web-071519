@@ -1,13 +1,13 @@
 def consolidate_cart(cart)
    cart_0 = cart.reduce({}) do |memo, item|
-    if memo.key?(item.keys[0])
-      memo[item.keys[0]][:count] += 1
-    else
-      memo[item.keys[0]] = item.values[0]
-      memo[item.keys[0]][:count] = 1
-    end
-  memo
-  end
+     if memo.key?(item.keys[0])
+       memo[item.keys[0]][:count] += 1
+     else
+       memo[item.keys[0]] = item.values[0]
+       memo[item.keys[0]][:count] = 1
+     end
+    memo
+   end
   cart_0
 end
 
